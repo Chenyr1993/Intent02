@@ -23,6 +23,7 @@ Double c,f;
         if(bundle!= null)    {  //把bundle值轉成double //利用key從bundle取出內容，原型態為string
             f=Double.parseDouble(bundle.getString("TEMP_F"));
             c=(f-32)*5/9;
+            c=Math.round(c*100.0)/100.0;
             textView_F.setText("攝氏溫度："+c);
         }
         btn_returnBack.setOnClickListener(new View.OnClickListener() {
